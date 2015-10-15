@@ -10,27 +10,154 @@
     font-style: normal;
 
 }
-
+* {
+transition: ease all .5s;
+box-sizing:border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 /* Set all parents to full height */
 html, body, 
 .container,
 .cbp-fbscroller,
 .cbp-fbscroller section { 
 	height: 100%; 
-	font-family: "Gill Sans","Gill Sans MT",Calibri,sans-serif
+	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+  color: #655E5C;
+    font-size: 16px;
+  line-height: 22px;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6 {
 	font-family: 'santelia_scriptbold';
 	color:#eed6ce;
+  margin-bottom: 2.5%;
 }
-section{
-	position: relative;
+h3,h4,h5,h6 {
+font-family: 'Lato', sans-serif;
+font-weight: 900;
+text-transform: uppercase;
+letter-spacing: 2px;
 }
-article{
-	padding:5% 60% 5% 20%;
+p {
+  margin-bottom: 2.5%;
+
+}
+a {
+  text-decoration: none;
+  color: #828998;
+}
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 3%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+  width: 100%;
+}
+.span_3_of_4 {
+  width: 74.25%;
+}
+.span_2_of_4 {
+  width: 48.5%;
+}
+.span_1_of_4 {
+  width: 22.75%;
 }
 
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {  margin: 1% 0 1% 0%; }
+  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+section {
+	position: relative;
+  clear: both;
+  padding: 5% 15%;
+  margin: 0px;
+}
+
+hr {
+  background-image: url(../images/dot.jpg);
+  height: 5px;
+  border: none;
+}
+.button {
+  font-family: 'Lato', sans-serif;
+font-weight: 100;
+letter-spacing: 2px;
+  background: #828998;
+  padding: 10px 20px;
+  border-radius: 2px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+  max-width: 250px;
+}
+.button:hover{
+  background: #223e68;
+}
+.overlay {
+  background: rgba(255,255,255,.75);
+  padding: 2.5%;
+}
+.script {
+  font-family: 'santelia_scriptbold';
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
 /* The nav is fixed on the right side  and we center it by translating it 50% 
 (we don't know it's height so we can't use the negative margin trick) */
 .cbp-fbscroller > nav {
@@ -67,31 +194,36 @@ margin: 10px;
 	background-attachment: fixed;
 }
 
-#fbsection1 {
+#section1 {
 	background-image: url(../images/1.gif);
+  text-align: center;
+  padding: 0;
 }
 
-#fbsection2 {
+#section2 {
   background-image: url(../images/lindsayanddaverosser_1.jpg);
 	
 }
 
-#fbsection3 {
-	background-image: url(../images/3.jpg);
+#section3 {
+	background-image: url(../images/3.svg);
+  
+}
+
+#section4 {
+	background-image: url(../images/2.png);
   background:#e5d3d1;
 }
 
-#fbsection4 {
-	background-image: url(../images/2.png);
-}
-
-#fbsection5 {
+#section5 {
 	background-image: url(../images/5.jpg);
+  background: #fff;
 }
 
-#logo{
-	width: 100vw;
-	height: 100vh;
+#logo {
+	width: 80vw;
+	height: 80vh;
+  margin: 0 auto;
 }
 path {
     stroke-dasharray: 2000;
@@ -100,7 +232,7 @@ path {
           animation: dash 10s linear;
 }
 
-#beauty path{
+#beauty path {
 	 -webkit-animation: dash 5s linear;
           animation: dash 5s linear;
 }
