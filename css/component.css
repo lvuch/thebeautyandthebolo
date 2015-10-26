@@ -86,6 +86,9 @@ a {
   text-decoration: none;
   color: #828998;
 }
+.drop {
+  float: left; color: #828998; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px;
+}
 /*  COLUMN SETUP  */
 .col {
   display: block;
@@ -147,9 +150,14 @@ letter-spacing: 2px;
 .button:hover{
   background: #223e68;
 }
-.overlay {
+.whiteoverlay {
   background: rgba(255,255,255,.75);
   padding: 2.5%;
+}
+.callout{
+  background: #FBFAF6;
+  padding: 40px;
+  border:double #E4DCC5;
 }
 .script {
   font-family: 'santelia_scriptbold';
@@ -213,6 +221,7 @@ margin: 10px;
 #section4 {
 	background-image: url(../images/2.png);
   background:#e5d3d1;
+  padding: 0;
 }
 
 #section5 {
