@@ -66,17 +66,39 @@ html, body,
     font-size: 16px;
   line-height: 22px;
 }
-
-h1,h2,h3,h4,h5,h6 {
+.container{
+  position: relative;
+}
+footer {
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color:#E4DCC5;
+  text-align: center;
+  padding: 10px;
+}
+h1,h2,h3,h4,h5,h6{
 	font-family: 'santelia_scriptbold';
 	color:#eed6ce;
   margin-bottom: 2.5%;
 }
-h3,h4,h5,h6 {
+h3,h4,h5,h6, blockquote,footer {
 font-family: 'Lato', sans-serif;
 font-weight: 900;
 text-transform: uppercase;
 letter-spacing: 2px;
+}
+h1{
+  font-size: 4em;
+}
+
+h3{
+  font-size: 2em;
+  line-height: 1.25em;
+  color:#E4DCC5;
 }
 p {
   margin-bottom: 2.5%;
@@ -87,7 +109,8 @@ a {
   color: #828998;
 }
 .drop {
-  float: left; color: #828998; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px;
+  float: left; color: #828998; font-size: 125px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px;
+      font-family: 'santelia_scriptbold';
 }
 /*  COLUMN SETUP  */
 .col {
@@ -116,11 +139,7 @@ a {
   width: 22.75%;
 }
 
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 480px) {
-  .col {  margin: 1% 0 1% 0%; }
-  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
-}
+
 section {
 	position: relative;
   clear: both;
@@ -132,6 +151,11 @@ hr {
   background-image: url(../images/dot.jpg);
   height: 5px;
   border: none;
+  margin: 30px 0;
+}
+.dotright{
+    background: url(../images/dot.jpg) repeat-y right center;
+    padding-right: 2%;
 }
 .button {
   font-family: 'Lato', sans-serif;
@@ -166,11 +190,20 @@ letter-spacing: 2px;
   margin: 0 auto;
   text-align: center;
 }
-/* The nav is fixed on the right side  and we center it by translating it 50% 
-(we don't know it's height so we can't use the negative margin trick) */
+
 .cbp-fbscroller > nav {
     position: fixed;
     z-index: 9999;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 50%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+   
 }
 .cbp-fbscroller > nav a {
     display: inline-block;
@@ -178,13 +211,18 @@ letter-spacing: 2px;
     z-index: 9999;
     text-decoration:none;
 color: #999;
-margin: 10px;
+padding: 10px;
+ border-bottom: medium solid rgba(255,255,255,.75);
 }
-
+.cbp-fbscroller > nav a:hover{
+  border-color:#82899F;
+}
 .no-touch .cbp-fbscroller > nav a:hover {
 	background: rgba(255,255,255,0.6);
 }
-
+.cbp-fbscroller > nav a:nth-child(1), .cbp-fbscroller > nav a:nth-child(2){
+  display: none;
+}
 .cbp-fbscroller > nav a.cbp-fbcurrent {
 	background: #fff;
 }
@@ -263,4 +301,35 @@ path {
   }
 }
 
-
+/*the proposal*/
+.proposal header {
+    background-image: url(../images/proposal.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+}
+.proposal h1 {
+    padding: 15%;
+    color: white;
+    text-align: center;
+}
+.proposal p {
+      font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -0.003em;
+}
+.proposal section {
+      padding: 5% 30%;
+}
+blockquote {
+  width: 55%;
+  margin-left: -5%;
+  padding: 1%;
+  float: left;
+  color: #828998;
+}
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {  margin: 1% 0 1% 0%; }
+  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+  section {padding: 5%;}
+}
