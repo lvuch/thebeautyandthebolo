@@ -1,0 +1,335 @@
+@font-face {
+    font-family: 'santelia_scriptbold';
+    src: url('../fonts/santeliascriptbold.eot');
+    src: url('../fonts/santeliascriptbold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/santeliascriptbold.woff2') format('woff2'),
+         url('../fonts/santeliascriptbold.woff') format('woff'),
+         url('../fonts/santeliascriptbold.ttf') format('truetype'),
+         url('../fonts/santeliascriptbold.svg#santelia_scriptbold_dmo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+* {
+transition: ease all .5s;
+box-sizing:border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set all parents to full height */
+html, body, 
+.container,
+.cbp-fbscroller,
+.cbp-fbscroller section { 
+	height: 100%; 
+	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+  color: #655E5C;
+    font-size: 16px;
+  line-height: 22px;
+}
+.container{
+  position: relative;
+}
+footer {
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color:#E4DCC5;
+  text-align: center;
+  padding: 10px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'santelia_scriptbold';
+	color:#eed6ce;
+  margin-bottom: 2.5%;
+}
+h3,h4,h5,h6, blockquote,footer {
+font-family: 'Lato', sans-serif;
+font-weight: 900;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+h1{
+  font-size: 4em;
+}
+
+h3{
+  font-size: 2em;
+  line-height: 1.25em;
+  color:#E4DCC5;
+}
+p {
+  margin-bottom: 2.5%;
+
+}
+a {
+  text-decoration: none;
+  color: #828998;
+}
+.drop {
+  float: left; color: #828998; font-size: 125px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px;
+      font-family: 'santelia_scriptbold';
+}
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 3%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+  width: 100%;
+}
+.span_3_of_4 {
+  width: 74.25%;
+}
+.span_2_of_4 {
+  width: 48.5%;
+}
+.span_1_of_4 {
+  width: 22.75%;
+}
+
+
+section {
+	position: relative;
+  clear: both;
+  padding: 5% 15%;
+  margin: 0px;
+}
+
+hr {
+  background-image: url(../images/dot.jpg);
+  height: 5px;
+  border: none;
+  margin: 30px 0;
+}
+.dotright{
+    background: url(../images/dot.jpg) repeat-y right center;
+    padding-right: 2%;
+}
+.button {
+  font-family: 'Lato', sans-serif;
+font-weight: 100;
+letter-spacing: 2px;
+  background: #828998;
+  padding: 10px 20px;
+  border-radius: 2px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+  max-width: 250px;
+}
+.button:hover{
+  background: #223e68;
+}
+.whiteoverlay {
+  background: rgba(255,255,255,.75);
+  padding: 2.5%;
+}
+.callout{
+  background: #FBFAF6;
+  padding: 40px;
+  border:double #E4DCC5;
+}
+.script {
+  font-family: 'santelia_scriptbold';
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cbp-fbscroller > nav {
+    position: fixed;
+    z-index: 9999;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 50%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+   
+}
+.cbp-fbscroller > nav a {
+    display: inline-block;
+    position: relative;
+    z-index: 9999;
+    text-decoration:none;
+color: #999;
+padding: 10px;
+ border-bottom: medium solid rgba(255,255,255,.75);
+}
+.cbp-fbscroller > nav a:hover{
+  border-color:#82899F;
+}
+.no-touch .cbp-fbscroller > nav a:hover {
+	background: rgba(255,255,255,0.6);
+}
+.cbp-fbscroller > nav a:nth-child(1), .cbp-fbscroller > nav a:nth-child(2){
+  display: none;
+}
+.cbp-fbscroller > nav a.cbp-fbcurrent {
+	background: #fff;
+}
+
+/* background-attachment does the trick */
+.cbp-fbscroller section {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.no-touch .cbp-fbscroller section {
+	background-attachment: fixed;
+}
+
+#section1 {
+	background-image: url(../images/1.gif);
+  text-align: center;
+  padding: 0;
+}
+
+#section2 {
+  background-image: url(../images/lindsayanddaverosser_1.jpg);
+	
+}
+
+#section3 {
+	background-image: url(../images/3.svg);
+  
+}
+
+#section4 {
+	background-image: url(../images/2.png);
+  background:#e5d3d1;
+  padding: 0;
+}
+
+#section5 {
+	background-image: url(../images/5.jpg);
+  background: #fff;
+}
+
+#logo {
+	width: 80vw;
+	height: 80vh;
+  margin: 0 auto;
+}
+path {
+    stroke-dasharray: 2000;
+/*  stroke-dashoffset: 2000;
+*/  -webkit-animation: dash 10s linear;
+          animation: dash 10s linear;
+}
+
+#beauty path {
+	 -webkit-animation: dash 5s linear;
+          animation: dash 5s linear;
+}
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*the proposal*/
+.proposal header {
+    background-image: url(../images/proposal.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+}
+.proposal h1 {
+    padding: 15%;
+    color: white;
+    text-align: center;
+}
+.proposal p {
+      font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -0.003em;
+}
+.proposal section {
+      padding: 5% 30%;
+}
+blockquote {
+  width: 55%;
+  margin-left: -5%;
+  padding: 1%;
+  float: left;
+  color: #828998;
+}
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {  margin: 1% 0 1% 0%; }
+  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+  section {padding: 5%;}
+}
